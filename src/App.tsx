@@ -1,26 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './pages/Login/Login';
+import Register from './pages/Đăng ký/Register';
+import Products from './pages/Products/Products';
+import CustomerLayout from './pages/CustomerLayout';
+import Navbar from './pages/Navbar';
+import Footer from './pages/Footer';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
-function App() {
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'react-confirm-alert/src/react-confirm-alert.css';
+import 'react-toastify/dist/ReactToastify.css';
+import CustomerHome from './pages/CustomerHome';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GoogleOAuthProvider clientId="306694139406-envmrdj4vhgpks0rfbqq36apnfbfam75.apps.googleusercontent.com">
+      <Router>
+        <>
+          <Navbar />
+          <Routes>
+            <Route path="/client/login" element={<Login />} />
+            <Route path="/client/register" element={<Register />} />
+             <Route path="/client" element={<CustomerLayout />}>
+              <Route path="/client/customer" element={<CustomerHome />} />
+              <Route path="/client/products" element={<Products />} />
+            </Route>
+          </Routes>
+          <Footer />
+        </>
+      </Router>
+    </GoogleOAuthProvider>
   );
-}
+};
 
 export default App;
