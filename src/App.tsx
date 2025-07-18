@@ -12,6 +12,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import 'react-toastify/dist/ReactToastify.css';
 import CustomerHome from './pages/CustomerHome';
+import ProductDetail from './pages/productdetail/Productdetail';
 
 const App = () => {
   return (
@@ -25,6 +26,9 @@ const App = () => {
              <Route path="/client" element={<CustomerLayout />}>
               <Route path="/client/customer" element={<CustomerHome />} />
               <Route path="/client/products" element={<Products />} />
+              <Route path="/client/productdetail/:productId" element={<ProductDetail />} />
+              
+
             </Route>
           </Routes>
           <Footer />
