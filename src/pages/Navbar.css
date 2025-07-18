@@ -1,0 +1,192 @@
+:root {
+  --main-color: #ffffff;
+  /* Màu nền navbar */
+  --hover-color: #f0f0f0;
+  /* Hover navbar nếu cần */
+  --text-color: #000000;
+  /* Màu chữ + icon */
+  --dropdown-bg: white;
+  --dropdown-text: #333;
+  --dropdown-hover: #f9f9f9;
+  --navbar-height: 40px;
+}
+
+.navbar {
+  background-color: var(--main-color);
+  color: var(--text-color);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--navbar-height);
+  border-bottom: 1px solid #e0e0e0;
+  /* thêm đường gạch nhẹ nếu muốn */
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  color: var(--text-color);
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-grow: 1;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.navbar-links li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar-links a {
+  position: relative;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 12px;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  background-color: var(--text-color);
+  /* Gạch dưới màu đen */
+  width: 0;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+.navbar-links a:hover {
+  color: var(--hover-color);
+  /* Màu chữ khi hover */
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Kính lúp */
+.search-icon-nav {
+  font-size: 20px;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.search-icon-nav:hover {
+  color: var(--hover-color);
+}
+
+/* Ô input tìm kiếm */
+.search-input-nav {
+  padding: 5px 12px;
+  border: none;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  outline: none;
+  width: 160px;
+  background-color: #f1f1f1;
+  color: black;
+  box-shadow: 0 0 0 2px white inset;
+  transition: all 0.3s ease;
+}
+
+.search-input-nav::placeholder {
+  color: #aaa;
+}
+
+@media screen and (max-width: 768px) {
+  .search-input-nav {
+    width: 120px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Avatar */
+.avatar-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.avatar-icon {
+  font-size: 28px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+/* Dropdown menu */
+.avatar-menu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background-color: var(--dropdown-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: none;
+  min-width: 170px;
+  padding: 10px 0;
+  z-index: 999;
+}
+
+.avatar-container:hover .avatar-menu {
+  display: block;
+}
+
+.avatar-menu a,
+.avatar-menu button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  width: 100%;
+  text-align: left;
+  color: var(--dropdown-text);
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.avatar-menu a:hover,
+.avatar-menu button:hover {
+  background-color: var(--dropdown-hover);
+}
+
+.user-name {
+  font-weight: bold;
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+  color: var(--text-color);
+}

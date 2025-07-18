@@ -1,0 +1,98 @@
+/* Login.css */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.login-box {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-left {
+  flex: 1;
+  background: #fff;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-left h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.underline {
+  width: 60px;
+  height: 3px;
+  background-color: #000;
+  margin-top: 10px;
+  border: none;
+}
+
+.login-right {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-field {
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.submit-btn {
+  padding: 12px;
+  background-color: #222;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.forgot-register {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.separator {
+  text-align: center;
+  margin: 20px 0;
+  font-weight: 600;
+}
+
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.facebook-btn {
+  background-color: #3b5998;
+  color: white;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 4px;
+}

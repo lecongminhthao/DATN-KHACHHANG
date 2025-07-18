@@ -1,0 +1,285 @@
+  /* === Container chính === */
+  .shopee-cart-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+
+  .shopee-cart-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  /* === Header 5 cột === */
+  .shopee-cart-header {
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    padding: 12px 15px;
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .col-product {
+    flex: 3;
+    display: flex;
+    align-items: center;
+  }
+
+  .col-price,
+  .col-quantity,
+  .col-total,
+  .col-action {
+    flex: 1;
+    text-align: center;
+  }
+
+  /* === Mỗi dòng sản phẩm === */
+  .shopee-cart-item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+
+  .col-product .shopee-cart-image {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+  }
+
+  .col-product .shopee-cart-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .col-product .shopee-cart-info {
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .shopee-cart-name {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  .shopee-cart-variant {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 8px;
+  }
+
+  .shopee-cart-old-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 5px;
+  }
+
+  .shopee-cart-sale-price {
+    color: #e53935;
+    font-weight: 600;
+  }
+
+  /* === Số lượng === */
+  .col-quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .col-quantity button {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .col-quantity button:hover {
+    background-color: #f5f5f5;
+  }
+
+  .col-quantity input {
+    width: 50px;
+    height: 32px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  /* === Tổng tiền từng dòng === */
+  .col-total {
+    font-size: 16px;
+    color: #e53935;
+    font-weight: 600;
+  }
+
+  /* === Xóa sản phẩm === */
+  .col-action button {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: #666;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .col-action button:hover {
+    background-color: #fff0f0;
+    border-color: #e53935;
+    color: #e53935;
+    transform: scale(1.05);
+  }
+
+  /* === Nút hiển thị voucher === */
+  .btn.btn-secondary {
+    margin-top: 20px;
+    background-color: #fff3e0;
+    color: #e53935;
+    border: 1px dashed #e53935;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn.btn-secondary:hover {
+    background-color: #ffe4d6;
+    color: #bf2f28;
+    border-color: #bf2f28;
+  }
+
+  /* === Danh sách voucher === */
+  .voucher-list-container {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .voucher-list-container h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .voucher-list-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .voucher-list-container li {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+  }
+
+  .voucher-list-container li:last-child {
+    border-bottom: none;
+  }
+
+  .voucher-list-container input[type="checkbox"] {
+    margin-right: 12px;
+    margin-top: 5px;
+    transform: scale(1.2);
+    accent-color: #ee4d2d;
+  }
+
+  .voucher-list-container label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+  }
+
+  .voucher-list-container strong {
+    color: #ee4d2d;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .voucher-list-container span {
+    font-size: 13px;
+    color: #555;
+    margin-top: 4px;
+  }
+
+  .voucher-list-container input:disabled {
+    cursor: not-allowed;
+  }
+
+  .voucher-list-container label:has(input:disabled) {
+    color: #aaa;
+  }
+
+  .voucher-list-container label:has(input:disabled) strong {
+    color: #aaa;
+  }
+
+  /* === Tổng kết đơn hàng === */
+  .shopee-cart-summary {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    border: 1px solid #eee;
+  }
+
+  .shopee-cart-total-label,
+  .shopee-cart-total-value {
+    display: inline-block;
+    width: 50%;
+    margin: 5px 0;
+  }
+
+  .shopee-cart-total-value {
+    text-align: right;
+  }
+
+  /* === Nút thanh toán === */
+  .shopee-cart-checkout {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    background-color: #ee4d2d;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .shopee-cart-checkout:hover {
+    background-color: #d64123;
+  }
