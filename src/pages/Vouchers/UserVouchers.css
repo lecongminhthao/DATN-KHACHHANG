@@ -1,0 +1,67 @@
+.voucher-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.voucher-container h2 {
+  text-align: center;
+  color: #ec9429;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.voucher-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.voucher-item {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #FFA500, #FF8C00);
+  border-radius: 12px;
+  padding: 20px;
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.voucher-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.voucher-header {
+  flex: 1;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.voucher-details {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.voucher-details span {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .voucher-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .voucher-header,
+  .voucher-details {
+    width: 100%;
+  }
+}
