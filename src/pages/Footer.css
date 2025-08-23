@@ -1,0 +1,93 @@
+.site-footer {
+    background-color: #f8f8f8;
+    padding: 40px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Phần top: 4 icon */
+.footer-top {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 30px;
+}
+
+.footer-box {
+    text-align: center;
+    max-width: 200px;
+    margin: 10px;
+}
+
+.footer-box i {
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: block;
+    color: #000;
+}
+
+.footer-box p {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.footer-box span {
+    font-size: 13px;
+    color: #666;
+}
+
+/* Phần giữa: 4 cột */
+.footer-middle {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.footer-about,
+.footer-contact,
+.footer-subscribe,
+.footer-fanpage {
+    padding: 10px;
+}
+
+.footer-about h4,
+.footer-contact h4,
+.footer-subscribe h4,
+.footer-fanpage h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-subscribe input {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.footer-subscribe button {
+    padding: 8px 20px;
+    background-color: #000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.footer-subscribe button:hover {
+    background-color: #444;
+}
+
+.footer-fanpage iframe {
+    max-width: 100%;
+    border: none;
+}

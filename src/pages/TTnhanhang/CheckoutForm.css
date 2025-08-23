@@ -1,0 +1,479 @@
+/* Khung bao toàn trang */
+.checkout-wrapper {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 16px;
+  font-family: "Arial", sans-serif;
+  color: #333;
+}
+
+/* Thanh tiến trình */
+.checkout-steps {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+.checkout-steps strong {
+  color: #d6001c;
+}
+
+/* Bố cục 2 cột */
+.checkout-body {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* FORM bên trái */
+.checkout-main {
+  flex: 3;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 24px;
+}
+
+/* Thẻ tiêu đề như “Thông tin người nhận” */
+.section h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  border-left: 4px solid #d6001c;
+  padding-left: 8px;
+}
+
+/* Input form */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #ff6600;
+  outline: none;
+}
+
+/* SIDEBAR bên phải */
+.checkout-sidebar {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 20px;
+  background-color: #fafafa;
+  position: sticky;
+  top: 20px;
+  min-width: 260px;
+}
+
+/* Tiêu đề sidebar */
+.checkout-sidebar h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+/* Dòng giá */
+.checkout-sidebar p {
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+/* Tổng tiền màu đỏ */
+.checkout-sidebar .total-price {
+  color: #d6001c;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 16px;
+  border-top: 1px solid #ddd;
+  padding-top: 12px;
+}
+
+/* Các nút */
+.btn-actions {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-danger {
+  background-color: #d6001c;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.btn-danger:hover {
+  background-color: #b90018;
+}
+
+.btn-outline-secondary {
+  background-color: white;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #f5f5f5;
+}
+
+/* Responsive (optional) */
+@media screen and (max-width: 768px) {
+  .checkout-body {
+    flex-direction: column;
+  }
+}
+
+.btn-row-right {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  /* Khoảng cách giữa 2 nút */
+  margin-top: 24px;
+}
+
+.btn-row-right .btn {
+  padding: 12px 26px;
+  /* To hơn: chiều cao + chiều rộng */
+  font-size: 16px;
+  /* Chữ to hơn */
+  font-weight: 600;
+  /* In đậm hơn 1 chút */
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+/*  */
+.voucher-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.btn-choose-voucher {
+  font-size: 13px;
+  padding: 4px 10px;
+  background-color: #fff;
+  border: 1px solid #d6001c;
+  color: #d6001c;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-choose-voucher:hover {
+  background-color: #d6001c;
+  color: white;
+}
+
+.voucher-list-box {
+  margin-top: 12px;
+  background-color: #fffdf4;
+  border: 1px dashed #f39c12;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.voucher-checkbox {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+/* Success Modal Styles */
+.success-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.success-modal {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.4s ease-out;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.success-modal::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: shimmer 2s infinite;
+}
+
+.success-icon {
+  margin-bottom: 20px;
+}
+
+.checkmark {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 3;
+  stroke: #4CAF50;
+  stroke-miterlimit: 10;
+  margin: 0 auto 20px;
+  box-shadow: inset 0px 0px 0px #4CAF50;
+  animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
+  position: relative;
+}
+
+.checkmark-circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+  stroke: #4CAF50;
+  fill: rgba(76, 175, 80, 0.2);
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.checkmark-stem {
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  position: absolute;
+  top: 35px;
+  left: 30px;
+  width: 20px;
+  height: 2px;
+  background: #4CAF50;
+  transform: rotate(45deg);
+}
+
+.checkmark-kick {
+  animation: stroke 0.2s cubic-bezier(0.65, 0, 0.45, 1) 0.9s forwards;
+  stroke-dasharray: 25;
+  stroke-dashoffset: 25;
+  position: absolute;
+  top: 45px;
+  left: 45px;
+  width: 10px;
+  height: 2px;
+  background: #4CAF50;
+  transform: rotate(-45deg);
+}
+
+.success-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.success-message {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.success-submessage {
+  font-size: 14px;
+  margin-bottom: 25px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+.success-details {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  backdrop-filter: blur(10px);
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.detail-item:last-child {
+  margin-bottom: 0;
+}
+
+.detail-icon {
+  font-size: 18px;
+  margin-right: 12px;
+  width: 24px;
+}
+
+.success-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.btn-continue-shopping,
+.btn-view-orders {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-continue-shopping {
+  background: #4CAF50;
+  color: white;
+}
+
+.btn-continue-shopping:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+.btn-view-orders {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-view-orders:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.auto-redirect {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scale {
+
+  0%,
+  100% {
+    transform: none;
+  }
+
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #4CAF50;
+  }
+}
+
+/* Responsive cho modal */
+@media (max-width: 768px) {
+  .success-modal {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+
+  .success-actions {
+    flex-direction: column;
+  }
+
+  .btn-continue-shopping,
+  .btn-view-orders {
+    width: 100%;
+  }
+}
